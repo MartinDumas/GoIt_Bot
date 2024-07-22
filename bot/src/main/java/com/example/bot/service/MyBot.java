@@ -17,9 +17,10 @@ public class MyBot extends TelegramLongPollingBot {
         if(update.getMessage().getText().equals("/start")) {
             sendMessage(chatId, "Get message");
         }
-        GettingPrivat24 privat24 = new GettingPrivat24();
+        GettingExchangeRates bankRates = new GettingExchangeRates();
+        String bank = update.getMessage().getText();
         try {
-            String message = privat24.readingJsonFile();
+            String message = bankRates.getExchangeRates(bank);
             sendMessage(chatId, message);
         }
         catch (Exception e) {
