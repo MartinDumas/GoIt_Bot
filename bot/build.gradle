@@ -23,7 +23,7 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	// https://mvnrepository.com/artifact/org.telegram/telegrambots-spring-boot-starter
 	implementation group: 'org.telegram', name: 'telegrambots-spring-boot-starter', version: '6.9.7.1'
-
+	implementation group: 'com.google.code.gson', name: 'gson', version: '2.11.0'
 }
 
 tasks.named('test') {
